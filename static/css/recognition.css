@@ -1,0 +1,160 @@
+/* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #2b5876, #4e4376);
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #222222;
+    padding: 20px;
+}
+
+.navbar-brand {
+    font-size: 1.8rem;
+    color: black;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand .logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+/* Hero Section */
+.hero-section {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+.title {
+    font-size: 3rem;
+    font-weight: 600;
+    animation: fadeInDown 1.5s ease-in-out;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+.buttons {
+    margin-top: 30px;
+}
+
+.btn {
+    margin: 10px;
+    font-size: 1.2rem;
+    padding: 12px 24px;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+}
+
+.btn-secondary {
+    background-color: #f4a261;
+    border: none;
+    color: white;
+}
+
+.btn-warning {
+    background-color: #ff6b6b;
+    border: none;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Video Feed Section */
+.video-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+#video-feed {
+    width: 80%;
+    max-width: 800px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+    border: 4px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+#video-feed:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
+}
+
+.video-container, .hero-section {
+    transition: opacity 0.5s ease-in-out, visibility 0.5s;
+}
+
+
+
+#stop-recognition {
+    display: block;
+    margin: 0 auto; /* Centers the button */
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    transition: all 0.3s ease-in-out;
+}
+
+#stop-recognition:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 15px rgba(255, 77, 77, 0.3);
+}
+
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

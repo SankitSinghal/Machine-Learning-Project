@@ -1,0 +1,260 @@
+/* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #2b5876, #4e4376);
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #333;
+    padding: 20px;
+}
+
+.navbar-brand {
+    font-size: 1.8rem;
+    color: black;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand .logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+/* Section Heading */
+h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: white;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Form Inputs */
+input[type="text"], select {
+    font-size: 1.1rem;
+    padding: 10px;
+    border-radius: 8px;
+    width: 100%;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    transition: border 0.3s ease, background 0.3s ease;
+}
+
+/* Improved Focus Effects */
+input[type="text"]:focus, select:focus {
+    border: 2px solid #007bff;
+    outline: none;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Parameter Container (Initially Hidden) */
+#parameter-container {
+    display: none;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Button Styles */
+.btn {
+    font-size: 1.2rem;
+    padding: 12px 24px;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    border: none;
+    cursor: pointer;
+    background-color: #4e4376;
+    color: white;
+    width: 100%;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-success {
+    background-color: #007bff;
+}
+
+.btn-success:hover {
+    background-color: #0056b3;
+}
+
+/* 📌 Video Feed Styling */
+#video-feed {
+    width: 100%;
+    max-width: 650px;
+    border-radius: 12px;
+    display: block;
+    margin: 20px auto;
+    border: 4px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.4);
+    background: black;
+}
+
+/* 🚀 Hover Effects */
+#video-feed:hover {
+    transform: scale(1.01);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* 🪞 Video Container */
+#video-container {
+    display: none;
+    text-align: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 700px;
+    margin: auto;
+}
+
+/* 📱 Responsive Adjustments */
+@media (max-width: 768px) {
+    #video-feed {
+        width: 100%;
+        max-width: 90%;
+    }
+
+    #video-container {
+        width: 95%;
+    }
+}
+
+/* 🌟 Progress Bar Container */
+#progress_bar {
+    width: 80%;
+    max-width: 500px;
+    height: 15px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    margin: 20px auto;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* 🌟 Progress Bar Container */
+#progress_bar {
+    width: 80%;
+    max-width: 500px;
+    height: 15px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    margin: 20px auto;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* 🔵 Progress Fill (Dynamic) */
+#progress_fill {
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(90deg, #00c6ff, #0072ff);
+    transition: width 1s ease-in-out; /* Slower transition */
+}
+
+/* 🎯 Centering Progress Text */
+#progress_text {
+    display: block;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 10px;
+    color: white;
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+    #progress_bar {
+        width: 90%;
+    }
+
+    #progress_text {
+        font-size: 1rem;
+    }
+}
+
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+    #progress_bar {
+        width: 90%;
+    }
+
+    #progress_text {
+        font-size: 1rem;
+    }
+}
+
+
+/* Completion Message */
+#completion-message {
+    margin-top: 20px;
+    display: none;
+    text-align: center;
+}
+
+.alert {
+    font-size: 1.1rem;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 8px;
+    color: white;
+}
+#message-box {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    color: #007bff; /* Bootstrap primary color */
+    background-color: #f8f9fa; /* Light background */
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #007bff;
+    display: inline-block;
+    width: auto;
+    margin: 10px auto;
+}
+/* Gestures Section */
+.gestures-section {
+    display: block;
+    transition: opacity 0.3s ease-out;
+}
+
+/* Hide Gestures Section */
+.gestures-section.hidden {
+    display: none;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .btn {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+
+    input[type="text"], select {
+        font-size: 1rem;
+    }
+
+    #video-feed {
+        width: 80%;
+    }
+}

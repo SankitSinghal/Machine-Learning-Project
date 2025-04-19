@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestures - FlickitUp</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/css/gesture_config.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <img src="../static/images/logo/flickitup.jpg" alt="FlickitUp Logo" class="logo">
+                FlickitUp
+            </a>
+        </div>
+    </nav>
+
+    <!-- Main Content Wrapper -->
+    <div class="container mt-5">
+        <!-- Gestures Section -->
+        <div id="gestures-section">
+            <h1 class="text-center mb-4">Add & Assign Gestures</h1>
+
+            <!-- Form to Add Gesture Name and Action -->
+            <div id="form-container" class="mb-4">
+                <label for="gesture-name" class="form-label">Gesture Name</label>
+                <input type="text" id="gesture-name" class="form-control" placeholder="Enter gesture name" required>
+
+                <label for="gesture-action" class="form-label mt-3">Select Action</label>
+                <select id="gesture-action" class="form-select" required></select>
+
+                <!-- Parameter input (Hidden Initially) -->
+                <div id="parameter-container" style="display: none; margin-top: 10px;">
+                    <label for="gesture-parameter">Enter File Path/URL:</label>
+                    <input type="text" id="gesture-parameter" class="form-control" placeholder="Enter path or URL">
+                </div>
+
+                <!-- Start Collecting Data Button -->
+                <button id="start-button" class="btn btn-success mt-3">Start Collecting Data</button>
+            </div>
+        </div>
+
+        <!-- Video Feed (Initially Hidden) ✅ Wrapped inside video-container -->
+        <div id="video-container" class="mt-4 text-center" style="display: none;background-color: #4169e1;">
+            <p id="message-box" class="text-primary">Align your gesture with the Screen</p>
+            <img id="video-feed" src="/video_feed" alt="Live Video Feed" />
+        </div>
+
+        <!-- Progress Bar (Hidden Initially) -->
+        <div id="progress_bar" style="display: none; width: 0%; height: 20px; background-color: #4169e1;"></div>
+        <span id="progress_text" style="display: none;">0/300 Images Collected</span>
+
+        <!-- Data Collection Complete Message -->
+        <div id="completion-message" class="mt-4" style="display: none;">
+            <p class="alert alert-success">Data Collection Complete! Gesture Added.</p>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/js/gesture_config.js"></script>
+
+</body>
+
+</html>
